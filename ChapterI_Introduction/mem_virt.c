@@ -7,15 +7,13 @@
 int main(int argc, char *argv[])
 {
     
-    char *str = argv[1];
-
-
-
+    int *ptr = malloc(sizeof(int));
 
     while(1)
     {
         sleep(1);
-        printf("\nVar: %s, argc: %d\n", str,  argc);
+        *ptr += 1;
+        printf("\naddress: %p, value: %d\n", ptr, *ptr);
     }
 
     return 0;
